@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>MOD_EMAIL</name>
+    <author>Yash Vora</author>
+    <authorEmail>asika@asikart.com</authorEmail>
+    <version>1.0.0</version>
+    <description>MOD_EMAIL_DESC</description>
+
+    <files>
+        <filename module="mod_email">mod_email.php</filename>
+        <folder>tmpl</folder>
+        <filename>index.html</filename>
+        <filename>mod_email.php</filename>
+        <filename>helper.php</filename>
+    </files>
+
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_email.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_email.sys.ini</language>
+	</languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="email" type="email"
+                    label="JGLOBAL_EMAIL"
+                    description="MOD_EMAIL_FIELD_DESC"
+                    required="true"
+                    size="30"
+                    class="inputbox"
+                    validate="email" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
